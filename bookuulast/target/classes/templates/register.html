@@ -1,0 +1,381 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Koparion – Book Shop Bootstrap 4 Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+		<!-- all css here -->
+		<!-- bootstrap v3.3.6 css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- meanmenu css -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+		<!-- owl.carousel css -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- font-awesome css -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- flexslider.css-->
+        <link rel="stylesheet" href="css/flexslider.css">
+		<!-- chosen.min.css-->
+        <link rel="stylesheet" href="css/chosen.min.css">
+		<!-- style css -->
+		<link rel="stylesheet" href="style.css">
+		<!-- responsive css -->
+        <link rel="stylesheet" href="css/responsive.css">
+		<!-- modernizr css -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="register">
+
+
+
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<!-- header-area-start -->
+		<header>
+			<!-- header-top-area-start -->
+			<div class="header-top-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="language-area">
+								<ul>
+									<li><img src="img/flag/1.jpg" alt="flag" /><a href="#">English<i class="fa fa-angle-down"></i></a>
+										<div class="header-sub">
+											<ul>
+												<li><a href="#"><img src="img/flag/2.jpg" alt="flag" />france</a></li>
+												<li><a href="#"><img src="img/flag/3.jpg" alt="flag" />croatia</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">USD $<i class="fa fa-angle-down"></i></a>
+										<div class="header-sub dolor">
+											<ul>
+												<li><a href="#">EUR €</a></li>
+												<li><a href="#">USD $</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="account-area text-right">
+								<div>
+									<ul>
+										<li><a href="checkout.html">注册</a></li>
+										<li><a href="login.html"><span>登录</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- header-top-area-end -->
+				<!-- header-mid-area-start -->
+				<div class="header-mid-area ptb-40">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+								<div class="header-search">
+									<form action="/seachBooks">
+										<input type="text" name="bookName" placeholder="搜索图书" />
+										<input type="submit" value="搜索图书">
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+								<div class="logo-area text-center logo-xs-mrg">
+									<a href="main.html"><img src="img/logo/logo.png" alt="logo" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- header-mid-area-end -->
+				<!-- main-menu-area-start -->
+				<div class="main-menu-area hidden-sm hidden-xs sticky-header-1" id="header-sticky">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="menu-area">
+									<nav>
+										<ul>
+											<li class="active"><a href="/">主页</a></li>
+											<li><a href="/shop">书</a></li>
+											<li><a href="product-details.html">有声读物</a></li>
+											<li><a href="product-details.html">儿童读物</a></li>
+										</ul>
+									</nav>
+								</div>
+								<div class="safe-area">
+									<a href="/exit">退出</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- main-menu-area-end -->
+				<!-- mobile-menu-area-start -->
+				<div class="mobile-menu-area hidden-md hidden-lg">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="mobile-menu">
+									<nav id="mobile-menu-active">
+										<ul id="nav">
+											<li class="active"><a href="/">主页</a></li>
+											<li><a href="/shop">书</a></li>
+											<li><a href="product-details.html">有声读物</a></li>
+											<li><a href="product-details.html">儿童读物</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- mobile-menu-area-end -->
+		</header>
+		<!-- header-area-end -->
+		<!-- breadcrumbs-area-start -->
+		<div class="breadcrumbs-area mb-70">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+		</div>
+		<!-- breadcrumbs-area-end -->
+		<!-- user-login-area-start -->
+		<div class="user-login-area mb-70">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="login-title text-center mb-30">
+							<h2>注册</h2>
+						</div>
+					</div>
+					<form action="/register" method="post">
+						<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+							<div class="billing-fields">
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<div class="single-register">
+											<label>名<span>*</span></label>
+											<input class="form-control"  type="text" name="lastName"/>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<div class="single-register">
+											<label>姓<span>*</span></label>
+											<input class="form-control" type="text" name="firstName"/>
+										</div>
+									</div>
+								</div>
+								<div class="single-register">
+									<label>公司名</label>
+									<input class="form-control" type="text" name="companyName"/>
+								</div>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<div class="single-register">
+											<label>邮箱地址<span>*</span></label>
+											<input class="form-control" type="text" name="emailAddress"/>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<div class="single-register">
+											<label>手机号<span>*</span></label>
+											<input class="form-control" type="text" name="Phone"/>
+										</div>
+									</div>
+								</div>
+								<div class="single-register">
+									<label>国家<span>*</span></label>
+									<select name="countryName" class="chosen-select" tabindex="1" style="width:100%;" data-placeholder="Default Sorting">
+										<option value="美国">美国</option>
+										<option value="法国">法国</option>
+										<option value="俄罗斯">俄罗斯</option>
+										<option value="中国">中国</option>
+										<option value="日本">日本</option>
+									</select>
+								</div>
+								<div class="single-register">
+									<label>地址<span>*</span></label>
+									<input class="form-control" type="text" placeholder="精确到区县" name="cityName"/>
+									<input class="form-control" type="text" id="billing_address_2" placeholder="详细地址" name="streetName"/>
+								</div>
+								<div class="single-register">
+									<label>账号密码<span>*</span></label>
+									<input class="form-control" type="text" placeholder="密码" name="password"/>
+								</div>
+								<div class="single-register single-register-3">
+									<input id="rememberme" type="checkbox" name="rememberme" value="forever">
+									<label class="inline">我同意 <a href="#">条款和条件</a></label>
+								</div>
+								<div class="single-register">
+									<input class="btn btn-primary" type="submit" value="注册">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- user-login-area-end -->
+		<!-- footer-area-start -->
+		<footer>
+			<!-- footer-top-start -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer-top-menu bb-2">
+								<nav>
+									<ul>
+										<li><a href="#">home</a></li>
+										<li><a href="#">Enable Cookies</a></li>
+										<li><a href="#">Privacy and Cookie Policy</a></li>
+										<li><a href="#">contact us</a></li>
+										<li><a href="#">blog</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer-top-start -->
+			<!-- footer-mid-start -->
+			<div class="footer-mid ptb-50">
+				<div class="container">
+					<div class="row">
+				        <div class="col-lg-8 col-md-8 col-sm-12">
+				            <div class="row">
+				                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        <div class="footer-title mb-20">
+                                            <h3>Products</h3>
+                                        </div>
+                                        <div class="footer-mid-menu">
+                                            <ul>
+                                                <li><a href="about.html">About us</a></li>
+                                                <li><a href="#">Prices drop </a></li>
+                                                <li><a href="#">New products</a></li>
+                                                <li><a href="#">Best sales</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        <div class="footer-title mb-20">
+                                            <h3>Our company</h3>
+                                        </div>
+                                        <div class="footer-mid-menu">
+                                            <ul>
+                                                <li><a href="contact.html">Contact us</a></li>
+                                                <li><a href="#">Sitemap</a></li>
+                                                <li><a href="#">Stores</a></li>
+                                                <li><a href="register.html">My account </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        <div class="footer-title mb-20">
+                                            <h3>Your account</h3>
+                                        </div>
+                                        <div class="footer-mid-menu">
+                                            <ul>
+                                                <li><a href="contact.html">Addresses</a></li>
+                                                <li><a href="#">Credit slips </a></li>
+                                                <li><a href="#"> Orders</a></li>
+                                                <li><a href="#">Personal info</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+				            </div>
+				        </div>
+				        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="single-footer mrg-sm">
+                                <div class="footer-title mb-20">
+                                    <h3>STORE INFORMATION</h3>
+                                </div>
+                                <div class="footer-contact">
+                                    <p class="adress">
+                                        <span>My Company</span>
+                                        42 avenue des Champs Elysées 75000 Paris France
+                                    </p>
+                                    <p><span>Call us now:</span> (+1)866-540-3229</p>
+                                    <p><span>Email:</span>  support@hastech.com</p>
+                                </div>
+                            </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+			<!-- footer-mid-end -->
+			<!-- footer-bottom-start -->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row bt-2">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="copy-right-area">
+								<p>Copyright ©<a href="http://www.bootstrapmb.com/">Koparion</a>. All Right Reserved.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="payment-img text-right">
+								<a href="#"><img src="img/1.png" alt="payment" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer-bottom-end -->
+		</footer>
+		<!-- footer-area-end -->
+		
+		
+		<!-- all js here -->
+		<!-- jquery latest version -->
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
+		<!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- owl.carousel js -->
+        <script src="js/owl.carousel.min.js"></script>
+		<!-- meanmenu js -->
+        <script src="js/jquery.meanmenu.js"></script>
+		<!-- wow js -->
+        <script src="js/wow.min.js"></script>
+		<!-- jquery.parallax-1.1.3.js -->
+        <script src="js/jquery.parallax-1.1.3.js"></script>
+		<!-- jquery.countdown.min.js -->
+        <script src="js/jquery.countdown.min.js"></script>
+		<!-- jquery.flexslider.js -->
+        <script src="js/jquery.flexslider.js"></script>
+		<!-- chosen.jquery.min.js -->
+        <script src="js/chosen.jquery.min.js"></script>
+		<!-- jquery.counterup.min.js -->
+        <script src="js/jquery.counterup.min.js"></script>
+		<!-- waypoints.min.js -->
+        <script src="js/waypoints.min.js"></script>
+		<!-- plugins js -->
+        <script src="js/plugins.js"></script>
+		<!-- main js -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

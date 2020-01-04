@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bookuu.mapper.BookMapper" >
+  <resultMap id="BaseResultMap" type="com.bookuu.entity.Book" >
+    <id column="bid" property="bid" jdbcType="INTEGER" />
+    <result column="bookName" property="bookname" jdbcType="VARCHAR" />
+    <result column="bookPrice" property="bookprice" jdbcType="DECIMAL" />
+    <result column="bookModel" property="bookmodel" jdbcType="INTEGER" />
+    <result column="bookBrief" property="bookbrief" jdbcType="VARCHAR" />
+    <result column="bookAuthor" property="bookauthor" jdbcType="VARCHAR" />
+    <result column="bookType" property="booktype" jdbcType="INTEGER" />
+    <result column="bookPress" property="bookpress" jdbcType="VARCHAR" />
+    <result column="bookDiscount" property="bookdiscount" jdbcType="DECIMAL" />
+    <result column="bookImage" property="bookimage" jdbcType="VARCHAR" />
+    <result column="bookDay" property="bookday" />
+    <result column="bookHeat" property="bookheat" jdbcType="INTEGER" />
+    <collection property="type" ofType="com.bookuu.entity.Type">
+      <id column="tid" property="tid" jdbcType="INTEGER"/>
+      <result column="typename" property="typename"  jdbcType="VARCHAR"/>
+    </collection>
+    <collection property="model" ofType="com.bookuu.entity.Model">
+      <id column="mid" property="mid" jdbcType="INTEGER"/>
+      <result column="modelname" property="modelname"  jdbcType="VARCHAR"/>
+    </collection>
+    <collection property="author" ofType="com.bookuu.entity.Author">
+      <id column="aid" property="aid" jdbcType="INTEGER" />
+      <result column="authorName" property="authorname" jdbcType="VARCHAR" />
+      <result column="authorBrief" property="authorbrief" jdbcType="LONGVARCHAR" />
+      <result column="authorHeat" property="authorheat" jdbcType="INTEGER"/>
+    </collection>
+  </resultMap>
+
+  <select id="book" resultMap="BaseResultMap" >
+    SELECT
+     *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+    where
+        book.bookName=#{bookname}
+  </select>
+
+  <select id="newBooks" resultMap="BaseResultMap">
+    SELECT
+      *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+    ORDER BY
+      book.bookDay DESC
+    LIMIT 0, 5
+  </select>
+
+  <select id="authorBook" resultMap="BaseResultMap">
+    SELECT
+      *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+    ORDER BY bookuu.author.authorHeat DESC
+    LIMIT 0,4
+  </select>
+
+  <select id="heatBooks" resultMap="BaseResultMap">
+    SELECT
+      *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+    ORDER BY book.bookHeat DESC
+    LIMIT 0,5
+  </select>
+  <select id="allBooks" resultMap="BaseResultMap">
+        SELECT
+            *
+        FROM
+            bookuu.book
+                INNER JOIN bookuu.model ON book.bookModel = model.mid
+                INNER JOIN bookuu.type ON book.bookType = type.tid
+                INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+  </select>
+
+  <select id="modelBooks" resultMap="BaseResultMap" >
+    SELECT
+        *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+    WHERE
+      type.tid=#{bookmodel}
+  </select>
+
+  <select id="seachBooks" resultMap="BaseResultMap">
+    SELECT
+     *
+    FROM
+      bookuu.book
+        INNER JOIN bookuu.model ON book.bookModel = model.mid
+        INNER JOIN bookuu.author ON book.bookAuthor = author.aid
+        INNER JOIN bookuu.type ON book.bookType = type.tid
+    WHERE bookName LIKE CONCAT('%',#{bookname},'%')
+  </select>
+</mapper>

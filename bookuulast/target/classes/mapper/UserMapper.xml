@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bookuu.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.bookuu.entity.User">
+    <id column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userEmail" jdbcType="VARCHAR" property="useremail" />
+    <result column="userPass" jdbcType="VARCHAR" property="userpass" />
+    <result column="userCompany" jdbcType="VARCHAR" property="usercompany" />
+    <result column="userAddress" jdbcType="VARCHAR" property="useraddress" />
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bookuu.mapper.ModelMapper">
+    <resultMap id="modelMap" type="com.bookuu.entity.Model">
+        <id column="mid" property="mid" jdbcType="INTEGER"/>
+        <result column="modelname" property="modelname"  jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="models" resultMap="modelMap">
+        select * from bookuu.model
+    </select>
+</mapper>
